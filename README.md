@@ -1,5 +1,5 @@
 <p align="left">
-   <img src="docs/logo.png" width="200"/>
+   <img src="docs/logo.png" width="150"/>
 </p>
 
 # Haskell - Study's Projects
