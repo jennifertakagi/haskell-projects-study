@@ -1,5 +1,6 @@
 module Jokenpo where
 
+-- Type "Jokenpo" with value constructor "Rock/Paper/Scissors"
 data Jokenpo = Rock | Paper | Scissors deriving Show
 data Player = Player {jokenpo :: Jokenpo, name :: String} deriving Show
 
