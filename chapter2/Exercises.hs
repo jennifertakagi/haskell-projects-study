@@ -18,3 +18,8 @@ cleanIntList intList = (reverse) [ i | i <- intList, (odd) i, (oddNotMultiplySev
 
 oddNotMultiplySeven :: Int -> Bool
 oddNotMultiplySeven value = (odd) value && (mod) value 7 /= 0
+
+-- Function that receives 3 strings and returns a tuple, each coordinate
+-- has the reversed string
+reverseStringTuple :: String -> String -> String -> (String, String, String)
+reverseStringTuple x y z = (reverse x, reverse y, reverse z)
