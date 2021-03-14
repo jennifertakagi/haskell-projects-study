@@ -23,3 +23,8 @@ oddNotMultiplySeven value = (odd) value && (mod) value 7 /= 0
 -- has the reversed string
 reverseStringTuple :: String -> String -> String -> (String, String, String)
 reverseStringTuple x y z = (reverse x, reverse y, reverse z)
+
+-- Function that receives a string s and a integer n and return the n first letters
+-- reversed and the other in original order
+revNum :: String -> Int -> String
+revNum s n = (reverse. take n) s ++ (drop n) s
