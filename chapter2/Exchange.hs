@@ -23,3 +23,10 @@ convertReal :: Money -> Double
 convertReal (Money val Real) = val
 convertReal (Money val Dollar) = val * 0.18
 convertReal (Money val Euro) = val * 0.15
+
+-- Function that receives a list of Money and convert all to Real unit
+convertAllReal :: [Money] -> [Double]
+convertAllReal listMoney = [convertReal m | m <- listMoney]
+
+maxCurrency :: [Money] -> Double
+maxCurrency listCurrency = (maximum) [value m | m <- listCurrency]
