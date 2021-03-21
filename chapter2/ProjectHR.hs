@@ -25,3 +25,16 @@ promotion (Person Intern n) = Person Developer n
 promotion (Person Developer n) = Person Lead n
 promotion (Person Lead n) = Person Manager n
 promotion (Person _ n) = Person Manager n
+
+hire :: String -> Person
+hire = Person Intern
+
+salaryAverage :: [Person] -> Double
+salaryAverage ps = (foldl calc 0 ps) / (fromIntegral $ length ps)
+  where calc salary person = salary + showSalary person
+
+hireInterns :: [String] -> [Person]
+hireInterns ps = map (hire Intern) ps
+
+routinePromotion :: Person -> String
+routinePromotion p = showPaycheck . promotion $ p
