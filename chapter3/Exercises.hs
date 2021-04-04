@@ -27,3 +27,12 @@ getPrimeNumbers li = filter (\x -> getNotPrime x == 0) li
 calcDoubleRemoveFourMultiply :: [Int] -> [Int]
 calcDoubleRemoveFourMultiply li = filter (isNotMultiplyFour) $ map (*2) li 
   where isNotMultiplyFour i = (mod) i 4 /= 0
+
+-- Type "Day" with value constructor "Sunday/Monday/Tuesday/Wednesday/Thursday/Friday/Saturday"
+data Day = Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday deriving Show
+
+-- Function that get all Tuesday from a list of Day
+filterTuesday :: [Day] -> [Day]
+filterTuesday days = filter (isTuesday) days
+  where isTuesday Tuesday = True
+        isTuesday _ = False
